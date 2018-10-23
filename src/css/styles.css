@@ -74,10 +74,11 @@ footer{
   /* bottom: 0;
   position: fixed; */
   width: 100%;
+  bottom: 0;
 }
 
 .layout-main-content-bg{
-  min-height: 300px;
+  min-height: 500px;
   background: url(../images/LEGO-1.jpg);
   background-repeat: no-repeat;
   /* background-size: cover; */

@@ -1,8 +1,9 @@
 import React from 'react'
+import SectionWrapper from './SectionWrapper'
 
 const Main = () => {
   return(
-    <section className="layout-main-content layout-main-content-bg family-sans d-flex text-center">
+    <SectionWrapper>
       <div className="container">
         <div className="row page-section-content justify-content-center">
           <div className="col-lg-8 col-sm-10 col-md-8">
@@ -13,7 +14,7 @@ const Main = () => {
           </div>
         </div>
       </div>
-    </section>
+    </SectionWrapper>
   );
 }
 

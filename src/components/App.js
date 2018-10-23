@@ -1,9 +1,12 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
-import Header from './header/Header'
-import Footer from './common/Footer'
 import { connect } from 'react-redux'
 import { BrowserRouter as Router} from 'react-router-dom'
+
+// custom imports
+import Footer from './common/Footer'
+import Nav from './navigation/Nav'
+import Main from './main/Main'
 
 class App extends React.Component {
     render() {
@@ -11,8 +14,8 @@ class App extends React.Component {
             <div>
                 <Router>
                   <div>
-                    <Header
-                      loading={this.props.loading} />
+                    <Nav/>
+                    <Main/>
                     <Footer/>
                   </div>
                 </Router>
