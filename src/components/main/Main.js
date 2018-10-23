@@ -18,7 +18,7 @@ const Main = () => {
         <div className="section-content row justify-content-center">
           <div className="col-lg-10 col-sm-10 col-md-10">
             <section className="py-2">
-              <h3 className="section-main-title">About</h3>
+              <h3 className="section-title">About</h3>
               <p className="section-text">Lorem ipsum dolor qsit amet consectetur adipisicing elit. Rem sed vel, quae iste aut expedita, fuga a qui omnis reiciendis assumenda enim tempora iure odio?</p>
             </section>
           </div>
