@@ -7,6 +7,7 @@ import { BrowserRouter as Router} from 'react-router-dom'
 import Footer from './common/Footer'
 import Nav from './navigation/Nav'
 import Main from './main/Main'
+import Game from './test/Test'
 
 class App extends React.Component {
     render() {
@@ -14,9 +15,10 @@ class App extends React.Component {
             <div>
                 <Router>
                   <div>
-                    <Nav/>
+                    {/* <Nav/>
                     <Main/>
-                    <Footer/>
+                    <Footer/> */}
+                    <Game/>
                   </div>
                 </Router>
             </div>
