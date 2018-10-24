@@ -3,34 +3,67 @@ import delay from './delay';
 // This file mocks a web API by working with the hard-coded data below.
 // It uses setTimeout to simulate the delay of an AJAX call.
 // All calls return promises.
-const authors = [
+const resume = [
   {
-    id: 'cory-house',
-    firstName: 'Cory',
-    lastName: 'House'
-  },
-  {
-    id: 'scott-allen',
-    firstName: 'Scott',
-    lastName: 'Allen'
-  },
-  {
-    id: 'dan-wahlin',
-    firstName: 'Dan',
-    lastName: 'Wahlin'
+    id: 'education',
+    description: '',
+    institutes: [
+      {
+        name: 'Kendriya Vidyalaya',
+        sub_title: "High school",
+        start_date: new Date(2008, 1, 1),
+        end_date: new Date(2010, 1, 1),
+        description: "Lorem ipsum dolor qsit amet consectetur adipisicing elit. Rem sed vel, quae iste aut expedita, fuga a qui omnis ",
+        achievements: [
+          {
+            title: "",
+            description: ""
+          },
+        ]
+
+      },
+      {
+        name: 'IIT Roorkee',
+        sub_title: "B.Tech",
+        start_date: new Date(2011, 1, 1),
+        end_date: new Date(2015, 1, 1),
+        description: "Lorem ipsum dolor qsit amet consectetur adipisicing elit. Rem sed vel, quae iste aut expedita, fuga a qui omnis ",
+        achievements: [
+          {
+            title: "",
+            description: ""
+          },
+        ]
+
+      },
+      {
+        name: 'Udacity',
+        sub_title: "High school",
+        start_date: new Date(2008, 1, 1),
+        end_date: new Date(2010, 1, 1),
+        description: "Lorem ipsum dolor qsit amet consectetur adipisicing elit. Rem sed vel, quae iste aut expedita, fuga a qui omnis ",
+        achievements: [
+          {
+            title: "",
+            description: ""
+          },
+        ]
+
+      }
+    ]
   }
 ];
 
 //This would be performed on the server in a real app. Just stubbing in.
-const generateId = (author) => {
-  return author.firstName.toLowerCase() + '-' + author.lastName.toLowerCase();
+const generateId = (field) => {
+  return field.id.toLowerCase();// + '-' + author.lastName.toLowerCase();
 };
 
 class AuthorApi {
-  static getAllAuthors() {
+  static getAllFields() {
     return new Promise((resolve, reject) => {
       setTimeout(() => {
-        resolve(Object.assign([], authors));
+        resolve(Object.assign([], resume));
       }, delay);
     });
   }

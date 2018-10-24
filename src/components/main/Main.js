@@ -1,14 +1,15 @@
 import React from 'react'
 import SectionWrapper from './SectionWrapper'
-
+import AuthorApi from '../../api/mockAuthorApi';
 /*
 justify-content-center: to align an element
 */
 const Main = () => {
+  console.log(AuthorApi.getAllFields());
   return(
     <SectionWrapper>
         <div className="section-content-title row justify-content-center">
-          <div className="col-lg-10 col-sm-10 col-md-10">
+          <div className="col-lg-12 col-sm-12 col-md-12">
             <section className="py-2">
               <h3 className="section-main-title">Resume</h3>
             </section>
@@ -16,7 +17,7 @@ const Main = () => {
         </div>
 
         <div className="section-content row justify-content-center">
-          <div className="col-lg-10 col-sm-10 col-md-10">
+          <div className="col-lg-12 col-sm-10 col-md-12">
             <section className="py-2">
               <h3 className="section-title">About</h3>
               <p className="section-text">Lorem ipsum dolor qsit amet consectetur adipisicing elit. Rem sed vel, quae iste aut expedita, fuga a qui omnis reiciendis assumenda enim tempora iure odio?</p>
@@ -25,7 +26,7 @@ const Main = () => {
         </div>
 
         <div className="section-content row justify-content-center">
-          <div className="col-lg-10 col-sm-10 col-md-10">
+          <div className="col-lg-12 col-sm-10 col-md-12">
             <section className="py-2">
               <h3 className="section-title">Education</h3>
               <p className="section-text">
@@ -100,7 +101,7 @@ const Main = () => {
         </div>
 
         <div className="section-content row justify-content-center">
-          <div className="col-lg-10 col-sm-10 col-md-10">
+          <div className="col-lg-12 col-sm-10 col-md-12">
             <section className="py-2">
               <h3 className="section-title">Projects</h3>
               <p className="section-text">
@@ -175,7 +176,7 @@ const Main = () => {
         </div>
 
         <div className="section-content row justify-content-center">
-          <div className="col-lg-10 col-sm-10 col-md-10">
+          <div className="col-lg-12 col-sm-10 col-md-12">
             <section className="py-2">
               <h3 className="section-title">Work Experience</h3>
               <p className="section-text">
