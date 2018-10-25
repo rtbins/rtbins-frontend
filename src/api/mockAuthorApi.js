@@ -5,6 +5,12 @@ import delay from './delay';
 // All calls return promises.
 const resume = [
   {
+    id: 'header',
+    firstName: 'Rohit',
+    lastName: 'Gupta',
+    objective: 'In a quest to create intelligent products',
+  },
+  {
     id: 'education',
     description: '',
     institutes: [
