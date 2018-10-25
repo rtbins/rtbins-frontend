@@ -15,10 +15,10 @@ class App extends React.Component {
             <div>
                 <Router>
                   <div>
-                    {/* <Nav/>
+                    <Nav/>
                     <Main/>
-                    <Footer/> */}
-                    <Game/>
+                    <Footer/>
+                    {/* <Game/> */}
                   </div>
                 </Router>
             </div>
