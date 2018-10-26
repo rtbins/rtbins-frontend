@@ -8,7 +8,7 @@ const resume = [
     id: 'header',
     firstName: 'Rohit',
     lastName: 'Gupta',
-    objective: 'In a quest to create intelligent products',
+    objective: 'In a quest to create intelligent products. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Non, explicabo.',
   },
   {
     id: 'education',

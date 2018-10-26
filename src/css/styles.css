@@ -129,3 +129,14 @@ footer{
 
 
 
+/* for page header*/
+.main-header-title{
+  font-size: 1.5em;
+  font-weight: 200;
+}
+
+.main-header-content{
+  color: #212121;
+  background: rgba(17, 31, 108, 0.212);
+}
+
