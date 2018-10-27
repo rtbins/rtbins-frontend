@@ -1,5 +1,5 @@
-import React, { Component } from "react";
-import PropTypes from "prop-types";
+import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 
 /*
 text-center: to align text
@@ -13,9 +13,7 @@ const SectionWrapper = props => {
                 family-sans
                 d-flex
                 ">
-      <div className="container">
-        {props.children}
-      </div>
+      <div className="container">{props.children}</div>
     </section>
   );
 };
