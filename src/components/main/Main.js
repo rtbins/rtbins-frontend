@@ -1,21 +1,22 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
 
-import SectionWrapper from './SectionWrapper';
 import Resume from '../resume/Resume';
-import Header from '../common/Header';
+import SubHeader from './SubHeader';
+import styles from './main.css';
 
 /*
 justify-content-center: to align an element
 */
 
 const Main = () => {
+  const wrapper = [styles.layout, styles.family_sans].join(' ');
   return (
-    <SectionWrapper>
-      <Header title={'Resume'} />
-      <Route path="/" exact component={Header} />
+    <div className={wrapper}>
+      <SubHeader title={'Resume'} />
+      <Route path="/" exact component={SubHeader} />
       <Route path="/courses" exact component={Resume} />
-    </SectionWrapper>
+    </div>
   );
 };
 

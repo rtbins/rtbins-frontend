@@ -8,7 +8,7 @@ export default {
   entry: {
     //'eventsource-polyfill', // necessary for hot reloading with IE
     //'webpack-hot-middleware/client?reload=true', //note that it reloads the page if hot module reloading fails.
-    app: ['./src/index.js', 'webpack-hot-middleware/client'],
+    app: ['./src/index.js', 'webpack-hot-middleware/client?reload=true'],
     //filename: path.resolve(__dirname, 'src/index'),
   },
   target: 'web',
@@ -43,8 +43,12 @@ export default {
         loader: "file-loader",
       },
       {
-        test: /(\.css)$/,
-        loaders: ['style', 'css']
+        test: /(bootstrap\.min|normalize|styles)\.css$/,
+        loaders: [ 'style-loader', 'css-loader' ]
+      },
+      {
+        test: /^((?!(bootstrap|normalize|styles)).)*\.css$/,
+        loader: 'style!css-loader?modules&importLoaders=1&localIdentName=[name]__[local]___[hash:base64:5]' 
       },
       {
         test: /(\.scss)$/,
