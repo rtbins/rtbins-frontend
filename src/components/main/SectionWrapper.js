@@ -5,7 +5,7 @@ import PropTypes from 'prop-types';
 text-center: to align text
 */
 
-const SectionWrapper = props => {
+const SectionWrapper = (props) => {
   return (
     <section
       className="layout-main-content 

@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import AuthorApi from '../../api/mockAuthorApi';
 import EducationCard from './EducationCard';
-import '../../css/resume.css';
+import styles from './resume.css';
 
 const createHeader = header => {
   return {
@@ -31,7 +31,7 @@ class Resume extends React.Component {
       return <EducationCard key={i} />;
     });
     return (
-      <div className="resume">
+      <div className={styles.resume}>
         <div className="section-content row justify-content-center">
           <div className="col-lg-12 col-sm-10 col-md-12">
             <section className="py-2">

@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 
 //TODO: implement layout for resume
 //TODO: implement timeline feature
@@ -11,7 +11,7 @@ class Resume extends React.Component {
           <p>This is the resume section with my work</p>
         </div>
       </section>
-    )
+    );
   }
 }
-export default Resume
+export default Resume;
