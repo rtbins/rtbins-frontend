@@ -8,7 +8,7 @@ text-center: to align text
 const SectionWrapper = (props) => {
   return (
     <section
-      className="layout-main-content 
+      className="layout-main-content
                 layout-main-content-bg
                 family-sans
                 d-flex

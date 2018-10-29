@@ -13,7 +13,7 @@ const Main = () => {
   const wrapper = [styles.layout, styles.family_sans].join(' ');
   return (
     <div className={wrapper}>
-      <SubHeader title={'Resume'} />
+      <SubHeader title="Resume" />
       <Route path="/" exact component={SubHeader} />
       <Route path="/courses" exact component={Resume} />
     </div>

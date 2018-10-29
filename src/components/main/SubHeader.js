@@ -6,7 +6,7 @@ import Layout from '../common/layout/Layout';
 
 const SubHeader = ({ title }) => {
   return (
-    <Layout bg_color={'sub_heading'}>
+    <Layout bg_color="sub_heading">
       <h4 className="main-header-title py-1">{title}</h4>
     </Layout>
   );

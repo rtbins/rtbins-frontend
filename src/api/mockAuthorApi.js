@@ -8,7 +8,8 @@ const resume = [
     id: 'header',
     firstName: 'Rohit',
     lastName: 'Gupta',
-    objective: 'In a quest to create intelligent products. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Non, explicabo.',
+    objective:
+      'In a quest to create intelligent products. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Non, explicabo.',
   },
   {
     id: 'education',
@@ -16,53 +17,53 @@ const resume = [
     institutes: [
       {
         name: 'Kendriya Vidyalaya',
-        sub_title: "High school",
+        sub_title: 'High school',
         start_date: new Date(2008, 1, 1),
         end_date: new Date(2010, 1, 1),
-        description: "Lorem ipsum dolor qsit amet consectetur adipisicing elit. Rem sed vel, quae iste aut expedita, fuga a qui omnis ",
+        description:
+          'Lorem ipsum dolor qsit amet consectetur adipisicing elit. Rem sed vel, quae iste aut expedita, fuga a qui omnis ',
         achievements: [
           {
-            title: "",
-            description: ""
+            title: '',
+            description: '',
           },
-        ]
-
+        ],
       },
       {
         name: 'IIT Roorkee',
-        sub_title: "B.Tech",
+        sub_title: 'B.Tech',
         start_date: new Date(2011, 1, 1),
         end_date: new Date(2015, 1, 1),
-        description: "Lorem ipsum dolor qsit amet consectetur adipisicing elit. Rem sed vel, quae iste aut expedita, fuga a qui omnis ",
+        description:
+          'Lorem ipsum dolor qsit amet consectetur adipisicing elit. Rem sed vel, quae iste aut expedita, fuga a qui omnis ',
         achievements: [
           {
-            title: "",
-            description: ""
+            title: '',
+            description: '',
           },
-        ]
-
+        ],
       },
       {
         name: 'Udacity',
-        sub_title: "High school",
+        sub_title: 'High school',
         start_date: new Date(2008, 1, 1),
         end_date: new Date(2010, 1, 1),
-        description: "Lorem ipsum dolor qsit amet consectetur adipisicing elit. Rem sed vel, quae iste aut expedita, fuga a qui omnis ",
+        description:
+          'Lorem ipsum dolor qsit amet consectetur adipisicing elit. Rem sed vel, quae iste aut expedita, fuga a qui omnis ',
         achievements: [
           {
-            title: "",
-            description: ""
+            title: '',
+            description: '',
           },
-        ]
-
-      }
-    ]
-  }
+        ],
+      },
+    ],
+  },
 ];
 
-//This would be performed on the server in a real app. Just stubbing in.
+// This would be performed on the server in a real app. Just stubbing in.
 const generateId = (field) => {
-  return field.id.toLowerCase();// + '-' + author.lastName.toLowerCase();
+  return field.id.toLowerCase(); // + '-' + author.lastName.toLowerCase();
 };
 
 class AuthorApi {
@@ -75,7 +76,7 @@ class AuthorApi {
   }
 
   static saveAuthor(author) {
-	author = Object.assign({}, author); // to avoid manipulating object passed in.
+    author = Object.assign({}, author); // to avoid manipulating object passed in.
     return new Promise((resolve, reject) => {
       setTimeout(() => {
         // Simulate server-side validation
@@ -89,12 +90,12 @@ class AuthorApi {
         }
 
         if (author.id) {
-          const existingAuthorIndex = authors.findIndex(a => a.id == author.id);
+          const existingAuthorIndex = authors.findIndex((a) => a.id == author.id);
           authors.splice(existingAuthorIndex, 1, author);
         } else {
-          //Just simulating creation here.
-          //The server would generate ids for new authors in a real app.
-          //Cloning so copy returned is passed by value rather than by reference.
+          // Just simulating creation here.
+          // The server would generate ids for new authors in a real app.
+          // Cloning so copy returned is passed by value rather than by reference.
           author.id = generateId(author);
           authors.push(author);
         }
@@ -107,7 +108,7 @@ class AuthorApi {
   static deleteAuthor(authorId) {
     return new Promise((resolve, reject) => {
       setTimeout(() => {
-        const indexOfAuthorToDelete = authors.findIndex(author => {
+        const indexOfAuthorToDelete = authors.findIndex((author) => {
           author.id == authorId;
         });
         authors.splice(indexOfAuthorToDelete, 1);

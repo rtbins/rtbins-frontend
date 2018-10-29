@@ -1,7 +1,7 @@
 import React from 'react';
 
-//TODO: implement layout for resume
-//TODO: implement timeline feature
+// TODO: implement layout for resume
+// TODO: implement timeline feature
 class Resume extends React.Component {
   render() {
     return (

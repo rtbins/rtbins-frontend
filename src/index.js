@@ -6,15 +6,15 @@ import React from 'react';
 import './css/styles.css';
 import 'jquery';
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
-import '../node_modules/bootstrap/dist/js/bootstrap.min.js';
+import '../node_modules/bootstrap/dist/js/bootstrap.min';
 import '../node_modules/toastr/build/toastr.min.css';
 import '../node_modules/normalize.css/normalize.css';
-import configureStore from './store/configureStore';
-import { loadCourses } from './actions/courseAction.js';
-import { loadAuthors } from './actions/authorActions';
-import App from './components/App';
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { fab } from '@fortawesome/free-brands-svg-icons';
+import configureStore from './store/configureStore';
+import { loadCourses } from './actions/courseAction';
+import { loadAuthors } from './actions/authorActions';
+import App from './components/App';
 
 library.add(fab);
 
@@ -26,5 +26,5 @@ render(
   <Provider store={store}>
     <App />
   </Provider>,
-  document.getElementById('app')
+  document.getElementById('app'),
 );

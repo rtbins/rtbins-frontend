@@ -21,7 +21,7 @@ function calculate_winner(squares) {
 }
 class Square extends React.Component {
   render() {
-    let square_class = ['square'];
+    const square_class = ['square'];
     if (this.props.isSol) {
       square_class.push('test-class');
     }
@@ -50,23 +50,23 @@ class Board extends React.Component {
   }
 
   render() {
-    let tiles = [];
+    const tiles = [];
     const [nrow, ncol] = [3, 3];
     for (let i = 0; i < nrow; i++) {
-      let row = [];
+      const row = [];
       for (let j = 0; j < ncol; j++) {
         row.push(
           this.renderSquare(
             j + i * 3,
             this.props.winComb.includes(j + i * 3),
-            this.props.winComb.includes(-1)
-          )
+            this.props.winComb.includes(-1),
+          ),
         );
       }
       tiles.push(
         <div key={i} className="board-row">
           {row}
-        </div>
+        </div>,
       );
     }
     return <div>{tiles}</div>;
@@ -87,6 +87,7 @@ class Game extends React.Component {
       stepNumber: 0,
     };
   }
+
   handleClick(i) {
     const history = this.state.history.slice(0, this.state.stepNumber + 1);
     const current = history[history.length - 1];
@@ -97,7 +98,7 @@ class Game extends React.Component {
     this.setState({
       history: history.concat([
         {
-          squares: squares,
+          squares,
           move: [Math.floor(i / 3) + 1, (i % 3) + 1],
         },
       ]),
@@ -105,27 +106,27 @@ class Game extends React.Component {
       stepNumber: history.length,
     });
   }
+
   jumpTo(step) {
     this.setState({
       stepNumber: step,
       xIsNext: step % 2 === 0,
     });
   }
+
   render() {
     const history = this.state.history;
     const current = history[this.state.stepNumber];
     const winner = calculate_winner(current.squares);
     let status;
     if (winner) {
-      status = 'Winner: ' + winner[0];
+      status = `Winner: ${winner[0]}`;
     } else {
-      status = 'Next player: ' + (this.state.xIsNext ? 'X' : 'O');
+      status = `Next player: ${this.state.xIsNext ? 'X' : 'O'}`;
     }
 
     const moves = history.map((step, move) => {
-      let desc = move
-        ? 'Go to move #' + move + ', ' + step.move
-        : 'Go to game start, ';
+      let desc = move ? `Go to move #${move}, ${step.move}` : 'Go to game start, ';
       if (move == this.state.stepNumber) desc = <b>{desc}</b>;
       return (
         <li key={move}>

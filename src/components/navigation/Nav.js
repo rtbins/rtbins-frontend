@@ -4,12 +4,12 @@ import { Link } from 'react-router-dom';
 const Nav = () => {
   return (
     <nav
-      className="site-nav 
-                    family-sans 
-                    navbar 
-                    navbar-expand-md 
-                    text-uppercase 
-                    navbar-dark 
+      className="site-nav
+                    family-sans
+                    navbar
+                    navbar-expand-md
+                    text-uppercase
+                    navbar-dark
                     fixed-top">
       <div className="container">
         <button
