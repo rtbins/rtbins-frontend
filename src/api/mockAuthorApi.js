@@ -8,8 +8,8 @@ const resume = [
     id: 'header',
     firstName: 'Rohit',
     lastName: 'Gupta',
-    objective:
-      'In a quest to create intelligent products. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Non, explicabo.',
+    objective: `In a quest to create intelligent products. Lorem ipsum dolor sit,
+       amet consectetur adipisicing elit. Non, explicabo.`,
   },
   {
     id: 'education',
@@ -20,8 +20,8 @@ const resume = [
         sub_title: 'High school',
         start_date: new Date(2008, 1, 1),
         end_date: new Date(2010, 1, 1),
-        description:
-          'Lorem ipsum dolor qsit amet consectetur adipisicing elit. Rem sed vel, quae iste aut expedita, fuga a qui omnis ',
+        description: `Lorem ipsum dolor qsit amet consectetur adipisicing elit. 
+        Rem sed vel, quae iste aut expedita, fuga a qui omnis`,
         achievements: [
           {
             title: '',
@@ -34,8 +34,8 @@ const resume = [
         sub_title: 'B.Tech',
         start_date: new Date(2011, 1, 1),
         end_date: new Date(2015, 1, 1),
-        description:
-          'Lorem ipsum dolor qsit amet consectetur adipisicing elit. Rem sed vel, quae iste aut expedita, fuga a qui omnis ',
+        description: `Lorem ipsum dolor qsit amet consectetur adipisicing elit. 
+          Rem sed vel, quae iste aut expedita, fuga a qui omnis`,
         achievements: [
           {
             title: '',
@@ -48,8 +48,8 @@ const resume = [
         sub_title: 'High school',
         start_date: new Date(2008, 1, 1),
         end_date: new Date(2010, 1, 1),
-        description:
-          'Lorem ipsum dolor qsit amet consectetur adipisicing elit. Rem sed vel, quae iste aut expedita, fuga a qui omnis ',
+        description: `Lorem ipsum dolor qsit amet consectetur adipisicing elit. 
+          Rem sed vel, quae iste aut expedita, fuga a qui omnis`,
         achievements: [
           {
             title: '',
@@ -71,6 +71,9 @@ class AuthorApi {
     return new Promise((resolve, reject) => {
       setTimeout(() => {
         resolve(Object.assign([], resume));
+        if (false) {
+          reject(new Error('Dummy error'));
+        }
       }, delay);
     });
   }
@@ -82,22 +85,22 @@ class AuthorApi {
         // Simulate server-side validation
         const minAuthorNameLength = 3;
         if (author.firstName.length < minAuthorNameLength) {
-          reject(`First Name must be at least ${minAuthorNameLength} characters.`);
+          reject(new Error(`First Name must be at least ${minAuthorNameLength} characters.`));
         }
 
         if (author.lastName.length < minAuthorNameLength) {
-          reject(`Last Name must be at least ${minAuthorNameLength} characters.`);
+          reject(new Error(`Last Name must be at least ${minAuthorNameLength} characters.`));
         }
 
         if (author.id) {
-          const existingAuthorIndex = authors.findIndex((a) => a.id == author.id);
-          authors.splice(existingAuthorIndex, 1, author);
+          // const existingAuthorIndex = authors.findIndex((a) => a.id === author.id);
+          // authors.splice(existingAuthorIndex, 1, author);
         } else {
           // Just simulating creation here.
           // The server would generate ids for new authors in a real app.
           // Cloning so copy returned is passed by value rather than by reference.
           author.id = generateId(author);
-          authors.push(author);
+          // authors.push(author);
         }
 
         resolve(author);
@@ -105,13 +108,13 @@ class AuthorApi {
     });
   }
 
-  static deleteAuthor(authorId) {
-    return new Promise((resolve, reject) => {
+  static deleteAuthor() {
+    return new Promise((resolve) => {
       setTimeout(() => {
-        const indexOfAuthorToDelete = authors.findIndex((author) => {
-          author.id == authorId;
-        });
-        authors.splice(indexOfAuthorToDelete, 1);
+        // const indexOfAuthorToDelete = authors.findIndex((author) => {
+        //   author.id == authorId;
+        // });
+        // authors.splice(indexOfAuthorToDelete, 1);
         resolve();
       }, delay);
     });

@@ -60,6 +60,9 @@ class CourseApi {
     return new Promise((resolve, reject) => {
       setTimeout(() => {
         resolve(Object.assign([], courses));
+        if (false) {
+          reject(new Error('Dummy error'));
+        }
       }, delay);
     });
   }
@@ -71,11 +74,11 @@ class CourseApi {
         // Simulate server-side validation
         const minCourseTitleLength = 1;
         if (course.title.length < minCourseTitleLength) {
-          reject(`Title must be at least ${minCourseTitleLength} characters.`);
+          reject(new Error(`Title must be at least ${minCourseTitleLength} characters.`));
         }
 
         if (course.id) {
-          const existingCourseIndex = courses.findIndex((a) => a.id == course.id);
+          const existingCourseIndex = courses.findIndex((a) => a.id === course.id);
           courses.splice(existingCourseIndex, 1, course);
         } else {
           // Just simulating creation here.
@@ -95,10 +98,13 @@ class CourseApi {
     return new Promise((resolve, reject) => {
       setTimeout(() => {
         const indexOfCourseToDelete = courses.findIndex((course) => {
-          course.id == courseId;
+          return course.id === courseId;
         });
         courses.splice(indexOfCourseToDelete, 1);
         resolve();
+        if (false) {
+          reject(new Error('Dummy error'));
+        }
       }, delay);
     });
   }
