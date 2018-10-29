@@ -7,10 +7,15 @@
     "start": "npm-run-all --parallel open:src ",
     "open:src": "babel-node tools/srcServer.js",
     "lint": "eslint --debug src tools",
-    "lint:write": "eslint --debug src/ --fix",
+    "lint:write": "eslint --debug src/ tools/ --fix",
     "test": "mocha --reporter progress tools/testSetup.js \"src/**/*.test.js\"",
     "test:watch": "npm run test -- --watch",
     "prettier": "prettier --write {tools,src}/**/*.js"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
   },
   "lint-staged": {
     "*.(js|jsx)": [
