@@ -8,8 +8,7 @@ const Layout = ({ bgColor, children }) => {
     <section className={styles[bgColor]}>
       <div
         className="container
-                   justify-content-center
-                   my-1"
+                   justify-content-center"
       >
         <div className="row">
           <div

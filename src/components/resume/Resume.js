@@ -1,5 +1,6 @@
 import React from 'react';
-import styles from './resume.css';
+// import styles from './resume.css';
+import Layout from '../common/Layout';
 
 class Resume extends React.Component {
   constructor(props) {
@@ -9,9 +10,9 @@ class Resume extends React.Component {
 
   render() {
     return (
-      <section className={styles.main}>
+      <Layout bgColor="content_alt">
         <h1>Hello resume!</h1>
-      </section>
+      </Layout>
     );
   }
 }
