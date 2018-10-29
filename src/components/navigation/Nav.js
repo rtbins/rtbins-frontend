@@ -5,12 +5,13 @@ const Nav = () => {
   return (
     <nav
       className="site-nav
-                    family-sans
-                    navbar
-                    navbar-expand-md
-                    text-uppercase
-                    navbar-dark
-                    fixed-top">
+                family-sans
+                navbar
+                navbar-expand-md
+                text-uppercase
+                navbar-dark
+                fixed-top"
+    >
       <div className="container">
         <button
           className="navbar-toggler"
@@ -18,7 +19,8 @@ const Nav = () => {
           data-toggle="collapse"
           data-target="#site-nav-items"
           aria-controls="#site-nav-items"
-          aria-label="Toggle navigation">
+          aria-label="Toggle navigation"
+        >
           <span className="navbar-toggler-icon" />
         </button>
 

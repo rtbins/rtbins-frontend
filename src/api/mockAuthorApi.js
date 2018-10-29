@@ -68,12 +68,9 @@ const generateId = (field) => {
 
 class AuthorApi {
   static getAllFields() {
-    return new Promise((resolve, reject) => {
+    return new Promise((resolve) => {
       setTimeout(() => {
         resolve(Object.assign([], resume));
-        if (false) {
-          reject(new Error('Dummy error'));
-        }
       }, delay);
     });
   }

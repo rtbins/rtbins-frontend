@@ -7,9 +7,13 @@ import { BrowserRouter as Router } from 'react-router-dom';
 import Footer from './common/Footer';
 import Nav from './navigation/Nav';
 import Main from './main/Main';
-import Game from './test/Test';
 
-class App extends React.Component {
+class App extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {};
+  }
+
   render() {
     return (
       <div>

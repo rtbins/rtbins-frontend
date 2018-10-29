@@ -12,8 +12,11 @@
     "test:watch": "npm run test -- --watch",
     "prettier": "prettier --write {tools,src}/**/*.js"
   },
-  "lint-staged": {    
-    "*.(js|jsx)": ["npm run lint:write", "git add"]  
+  "lint-staged": {
+    "*.(js|jsx)": [
+      "npm run lint:write",
+      "git add"
+    ]
   },
   "author": "Cory House",
   "license": "MIT",
