@@ -2,10 +2,15 @@
   background: #254558;
   color: #eafc40;
 }
-.content{
+.white{
   background: #f4f5f6;
   color:black;
 }
+.yellow{
+  background: #bcdb82;
+  color:black;
+}
+
 .content_alt{
   background: #bcdb82;
   color:black;
