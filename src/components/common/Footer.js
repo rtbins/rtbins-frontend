@@ -1,5 +1,7 @@
-import React from 'react';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import React from 'react'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { library } from '@fortawesome/fontawesome-svg-core'
+import { fab } from '@fortawesome/free-brands-svg-icons'
 
 const Footer = () => {
   return (
@@ -43,7 +45,7 @@ const Footer = () => {
         </a>
       </section>
     </footer>
-  );
-};
+  )
+}
 
-export default Footer;
+export default Footer
