@@ -1,7 +1,7 @@
 import React from 'react'
 import { Route } from 'react-router-dom'
 
-import Resume from '../resume/resume'
+import Resume from '../Resume'
 import SubHeader from './SubHeader'
 import styles from './main.css'
 

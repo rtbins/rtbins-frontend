@@ -1,0 +1,20 @@
+[
+  {
+    "mission": {
+      "value": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem, facilis.",
+      "theme": "yellow"
+    },
+    "workExperience": {
+      "value": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem, facilis.",
+      "theme": "white"
+    },
+    "education": {
+      "value": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem, facilis.",
+      "theme": "yellow"
+    },
+    "projects": {
+      "value": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem, facilis.",
+      "theme": "white"
+    }
+  }
+]
