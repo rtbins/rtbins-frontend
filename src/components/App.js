@@ -1,44 +1,23 @@
-import React, { Component } from 'react';
-import PropTypes from 'prop-types';
-import { connect } from 'react-redux';
-import { BrowserRouter as Router } from 'react-router-dom';
+// @flow
+import React from 'react'
+import { BrowserRouter as Router } from 'react-router-dom'
 
-// custom imports
-import Footer from './common/Footer';
-import Nav from './navigation/Nav';
-import Main from './main/Main';
+import Footer from './Footer'
+import Header from './Header'
+import Main from './Main'
 
-class App extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {};
-  }
-
-  render() {
-    return (
-      <div>
-        <Router>
-          <div>
-            <Nav />
-            <Main />
-            <Footer />
-            {/* <Game/> */}
-          </div>
-        </Router>
-      </div>
-    );
-  }
+const App = () => {
+  return (
+    <div>
+      <Router>
+        <div>
+          <Header />
+          <Main />
+          <Footer />
+        </div>
+      </Router>
+    </div>
+  )
 }
 
-App.propTypes = {
-  // children: PropTypes.object.isRequired,
-  loading: PropTypes.bool.isRequired,
-};
-
-function mapStateToProps(state) {
-  return {
-    loading: state.ajaxCallsInProgress > 0,
-  };
-}
-
-export default connect(mapStateToProps)(App);
+export default App

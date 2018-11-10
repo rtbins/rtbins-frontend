@@ -22,7 +22,7 @@ module.exports = {
 	},
 	rules: {
 		'linebreak-style': 'off', // Don't play nicely with Windows.
-
+		'semi': 0,
 		'arrow-parens': 'off', // Incompatible with prettier
 		'object-curly-newline': 'off', // Incompatible with prettier
 		'no-mixed-operators': 'off', // Incompatible with prettier

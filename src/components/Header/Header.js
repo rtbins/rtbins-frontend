@@ -1,7 +1,7 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React from 'react'
+import { Link } from 'react-router-dom'
 
-const Nav = () => {
+const Header = () => {
   return (
     <nav
       className="site-nav
@@ -43,7 +43,7 @@ const Nav = () => {
         </section>
       </div>
     </nav>
-  );
-};
+  )
+}
 
-export default Nav;
+export default Header
