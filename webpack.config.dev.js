@@ -1,79 +1,81 @@
-import webpack from 'webpack';
-import path from 'path';
+import webpack from 'webpack'
+import path from 'path'
 
 export default {
   mode: 'development',
   devtool: 'inline-source-map',
-  //noInfo: false,
+  // noInfo: false,
   entry: {
-    //'eventsource-polyfill', // necessary for hot reloading with IE
-    //'webpack-hot-middleware/client?reload=true', //note that it reloads the page if hot module reloading fails.
+    // 'eventsource-polyfill', // necessary for hot reloading with IE
+    // 'webpack-hot-middleware/client?reload=true', //note that it reloads the page if hot module reloading fails.
     app: ['./src/index.js', 'webpack-hot-middleware/client?reload=true'],
-    //filename: path.resolve(__dirname, 'src/index'),
+    // filename: path.resolve(__dirname, 'src/index'),
   },
   target: 'web',
   output: {
-    path: __dirname + '/dist', // Note: Physical files are only output by the production build task `npm run build`.
+    path: `${__dirname}/dist`, // Note: Physical files are only output by the production build task `npm run build`.
     publicPath: '/',
-    filename: 'bundle.js'
+    filename: 'bundle.js',
   },
   devServer: {
-    contentBase: path.resolve(__dirname, 'src')
+    contentBase: path.resolve(__dirname, 'src'),
   },
   plugins: [
     new webpack.HotModuleReplacementPlugin(),
     new webpack.NoEmitOnErrorsPlugin(),
     new webpack.ProvidePlugin({
-      "React": "react",
+      React: 'react',
       $: 'jquery',
       jQuery: 'jquery',
       'window.jQuery': 'jquery',
-      Popper: ['popper.js', 'default'], 
-  }),
+      Popper: ['popper.js', 'default'],
+    }),
   ],
   // Below telling webpack type of files we want it to handle
   module: {
-    rules: [{
+    rules: [
+      {
         test: /\.js$/,
         include: path.join(__dirname, 'src'),
-        loaders: ['babel']
+        loaders: ['babel'],
       },
       {
         test: /\.(gif|svg|jpg|png)$/,
-        loader: "file-loader",
+        loader: 'file-loader',
       },
       {
         test: /(bootstrap\.min|normalize|styles)\.css$/,
-        loaders: [ 'style-loader', 'css-loader' ]
+        loaders: ['style-loader', 'css-loader'],
       },
       {
         test: /^((?!(bootstrap|normalize|styles)).)*\.css$/,
-        loader: 'style!css-loader?modules&importLoaders=1&localIdentName=[name]__[local]___[hash:base64:5]' 
+        loader:
+          'style!css-loader?modules&importLoaders=1&localIdentName=[name]__[local]___[hash:base64:5]',
       },
       {
         test: /(\.scss)$/,
-        loaders: ['style', 'css', 'sass']
+        loaders: ['style', 'css', 'sass'],
       },
       {
         test: /\.eot(\?v=\d+\.\d+\.\d+)?$/,
-        loader: 'file'
+        loader: 'file',
       },
       {
         test: /\.(woff|woff2)$/,
-        loader: 'url?prefix=font/&limit=5000'
+        loader: 'url?prefix=font/&limit=5000',
       },
       {
         test: /\.ttf(\?v=\d+\.\d+\.\d+)?$/,
-        loader: 'url?limit=10000&mimetype=application/octet-stream'
+        loader: 'url?limit=10000&mimetype=application/octet-stream',
       },
       {
         test: /\.svg(\?v=\d+\.\d+\.\d+)?$/,
-        loader: 'url?limit=10000&mimetype=image/svg+xml'
-      }
-    ]
+        loader: 'url?limit=10000&mimetype=image/svg+xml',
+      },
+    ],
   },
   resolveLoader: {
-    moduleExtensions: ["-loader"]
+    moduleExtensions: ['-loader'],
   },
   /*
   optimization: {
@@ -93,4 +95,4 @@ export default {
     }
   }
   */
-};
+}
