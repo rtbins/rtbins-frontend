@@ -1,5 +1,7 @@
+// #region imports
 import React from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+// #endregion
 
 const Footer = () => {
   return (
@@ -15,7 +17,10 @@ const Footer = () => {
           rel="noreferrer noopener"
           href="https://www.facebook.com/rohitgupta.yo"
         >
-          <FontAwesomeIcon className="layout-icon py-2" icon={['fab', 'facebook']} />
+          <FontAwesomeIcon
+            className="layout-icon py-2"
+            icon={['fab', 'facebook']}
+          />
         </a>
         <a
           className="text-light px-2"
@@ -23,7 +28,10 @@ const Footer = () => {
           rel="noreferrer noopener"
           href="https://www.facebook.com/rohitgupta.yo"
         >
-          <FontAwesomeIcon className="layout-icon py-2" icon={['fab', 'linkedin']} />
+          <FontAwesomeIcon
+            className="layout-icon py-2"
+            icon={['fab', 'linkedin']}
+          />
         </a>
         <a
           className="text-light px-2"
@@ -31,7 +39,10 @@ const Footer = () => {
           rel="noreferrer noopener"
           href="https://www.facebook.com/rohitgupta.yo"
         >
-          <FontAwesomeIcon className="layout-icon py-2" icon={['fab', 'github']} />
+          <FontAwesomeIcon
+            className="layout-icon py-2"
+            icon={['fab', 'github']}
+          />
         </a>
         <a
           className="text-light px-2"
@@ -39,7 +50,10 @@ const Footer = () => {
           rel="noreferrer noopener"
           href="https://www.facebook.com/rohitgupta.yo"
         >
-          <FontAwesomeIcon className="layout-icon py-2" icon={['fab', 'youtube']} />
+          <FontAwesomeIcon
+            className="layout-icon py-2"
+            icon={['fab', 'youtube']}
+          />
         </a>
       </section>
     </footer>

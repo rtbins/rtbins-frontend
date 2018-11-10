@@ -1,3 +1,4 @@
+// #region imports
 import React from 'react'
 import styles from './resume.css'
 import Mission from './content/mission'
@@ -6,6 +7,7 @@ import Education from './content/education'
 import WorkExperience from './content/workExperience'
 
 import data from '../../data/resume'
+// #endregion
 
 class Resume extends React.Component {
   constructor(props) {

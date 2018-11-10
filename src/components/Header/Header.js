@@ -1,5 +1,7 @@
+// #region imports
 import React from 'react'
 import { Link } from 'react-router-dom'
+// #endregion
 
 const Header = () => {
   return (

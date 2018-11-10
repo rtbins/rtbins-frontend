@@ -1,4 +1,4 @@
-// babel-polfill is used for the features which cannot be transpiled by babel
+// #region imports
 import 'babel-polyfill'
 import { Provider } from 'react-redux'
 import { render } from 'react-dom'
@@ -16,6 +16,7 @@ import configureStore from './store/configureStore'
 import { loadCourses } from './actions/courseAction'
 import { loadAuthors } from './actions/authorActions'
 import App from './components/App'
+// #endregion
 
 library.add(fab)
 

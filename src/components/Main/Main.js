@@ -1,9 +1,11 @@
+// #region imports
 import React from 'react'
 import { Route } from 'react-router-dom'
 
 import Resume from '../Resume'
 import SubHeader from './SubHeader'
 import styles from './main.css'
+// #endregion
 
 const Main = () => {
   const wrapper = [styles.layout, styles.family_sans].join(' ')
