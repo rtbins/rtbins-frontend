@@ -5,27 +5,18 @@ import Projects from './content/projects'
 import Education from './content/education'
 import WorkExperience from './content/workExperience'
 
+import data from '../../data/resume'
+
 class Resume extends React.Component {
   constructor(props) {
     super(props)
     this.state = {
-      mission: {
-        value: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem, facilis.',
-        theme: 'yellow',
-      },
-      workExperience: {
-        value: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem, facilis.',
-        theme: 'white',
-      },
-      education: {
-        value: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem, facilis.',
-        theme: 'yellow',
-      },
-      projects: {
-        value: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem, facilis.',
-        theme: 'white',
-      },
+      mission: null,
+      projects: null,
+      education: null,
+      workExperience: null,
     }
+    this.state = data[0]
   }
 
   render() {
