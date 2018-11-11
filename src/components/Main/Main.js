@@ -10,6 +10,7 @@ import data from '../../data/resume'
 
 const Main = () => {
   const wrapper = [styles.layout, styles.family_sans].join(' ')
+  const resumeData = data[0]
   return (
     <div className={wrapper}>
       <Route
@@ -19,7 +20,7 @@ const Main = () => {
       />
       <Route
         path="/courses"
-        render={() => <Resume {...data[0]} title="Resume" />}
+        render={() => <Resume {...resumeData} title="Resume" />}
       />
     </div>
   )

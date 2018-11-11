@@ -1,20 +1,16 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-
-// import styles from './subheader.css';
-// import styles from './subheader.css';
-import Layout from '../../common/Layout';
+import React from 'react'
+import PropTypes from 'prop-types'
 
 const Projects = ({ projects }) => {
   return (
-    <Layout bgColor={projects.theme}>
+    <div bgColor={projects.theme}>
       <h1>{projects.value}</h1>
-    </Layout>
-  );
-};
+    </div>
+  )
+}
 
 Projects.propTypes = {
   projects: PropTypes.object.isRequired,
-};
+}
 
-export default Projects;
+export default Projects

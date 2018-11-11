@@ -1,20 +1,16 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-
-// import styles from './subheader.css';
-// import styles from './subheader.css';
-import Layout from '../../common/Layout';
+import React from 'react'
+import PropTypes from 'prop-types'
 
 const WorkExperience = ({ workExperience }) => {
   return (
-    <Layout bgColor={workExperience.theme}>
+    <div bgColor={workExperience.theme}>
       <h1>{workExperience.value}</h1>
-    </Layout>
-  );
-};
+    </div>
+  )
+}
 
 WorkExperience.propTypes = {
   workExperience: PropTypes.object.isRequired,
-};
+}
 
-export default WorkExperience;
+export default WorkExperience

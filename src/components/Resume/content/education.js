@@ -1,20 +1,16 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-
-// import styles from './subheader.css';
-// import styles from './subheader.css';
-import Layout from '../../common/Layout';
+import React from 'react'
+import PropTypes from 'prop-types'
 
 const Education = ({ education }) => {
   return (
-    <Layout bgColor={education.theme}>
+    <div bgColor={education.theme}>
       <h1>{education.value}</h1>
-    </Layout>
-  );
-};
+    </div>
+  )
+}
 
 Education.propTypes = {
   education: PropTypes.object.isRequired,
-};
+}
 
-export default Education;
+export default Education

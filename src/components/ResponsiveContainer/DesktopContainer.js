@@ -3,7 +3,7 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import { Segment, Responsive, Visibility } from 'semantic-ui-react'
 import styles from './styles/desktopContainer.css'
-import { MobileHeader, DesktopHeader } from '../AppHeader'
+import { DesktopHeader } from '../AppHeader'
 // #endregion
 
 class DesktopContainer extends React.Component {
