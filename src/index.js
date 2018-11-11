@@ -3,6 +3,8 @@ import 'babel-polyfill'
 import { Provider } from 'react-redux'
 import { render } from 'react-dom'
 import React from 'react'
+import 'semantic-ui-css/semantic.min.css'
+
 import './css/styles.css'
 
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css'

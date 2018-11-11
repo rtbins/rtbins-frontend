@@ -44,11 +44,11 @@ export default {
         loader: 'file-loader',
       },
       {
-        test: /(bootstrap\.min|normalize|styles)\.css$/,
+        test: /(bootstrap\.min|normalize|css.styles|semantic\.min)\.css$/,
         loaders: ['style-loader', 'css-loader'],
       },
       {
-        test: /^((?!(bootstrap|normalize|styles)).)*\.css$/,
+        test: /^((?!(bootstrap|normalize|css.styles|semantic\.min)).)*\.css$/,
         loader:
           'style!css-loader?modules&importLoaders=1&localIdentName=[name]__[local]___[hash:base64:5]',
       },

@@ -6,6 +6,7 @@ import Mission from './content/mission'
 import Projects from './content/projects'
 import Education from './content/education'
 import WorkExperience from './content/workExperience'
+
 // #endregion
 
 const Resume = ({ mission, projects, education, workExperience }) => {

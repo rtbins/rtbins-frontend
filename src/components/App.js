@@ -3,7 +3,7 @@
 import React from 'react'
 import { BrowserRouter as Router } from 'react-router-dom'
 import Footer from './Footer'
-import Header from './Header'
+import ResponsiveContainer from './ResponsiveContainer'
 import Main from './Main'
 // #endregion
 
@@ -12,7 +12,7 @@ const App = () => {
     <div>
       <Router>
         <div>
-          <Header />
+          <ResponsiveContainer />
           <Main />
           <Footer />
         </div>
