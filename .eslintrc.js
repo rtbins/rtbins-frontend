@@ -26,9 +26,9 @@ module.exports = {
 		'arrow-parens': 'off', // Incompatible with prettier
 		'object-curly-newline': 'off', // Incompatible with prettier
 		'no-mixed-operators': 'off', // Incompatible with prettier
-		'arrow-body-style': 'off', // Not our taste?
+		'arrow-body-style': 'as-needed', // Not our taste?
 		'function-paren-newline': 'off', // Incompatible with prettier
-		'no-plusplus': 'off',
+		//'no-plusplus': 'off',
 		'space-before-function-paren': 0, // Incompatible with prettier
 
 		'max-len': ['error', 100, 2, { ignoreUrls: true, }], // airbnb is allowing some edge cases
@@ -38,11 +38,11 @@ module.exports = {
 		'no-param-reassign': 'off', // Not our taste?
 		"radix": "off", // parseInt, parseFloat radix turned off. Not my taste.
 
-		'react/require-default-props': 'off', // airbnb use error
+		//'react/require-default-props': 'off', // airbnb use error
 		'react/forbid-prop-types': 'off', // airbnb use error
 		'react/jsx-filename-extension': ['error', { extensions: ['.js'] }], // airbnb is using .jsx
 
-		'prefer-destructuring': 'off',
+		'prefer-destructuring': 'on',
 
 		'react/no-find-dom-node': 'off', // I don't know
 		'react/no-did-mount-set-state': 'off',

@@ -1,7 +1,5 @@
-import expect from 'expect'
-
-describe('dummy test', () => {
-  it('should pass', () => {
-    expect(true).toEqual(true)
+describe('random title', () => {
+  test('Number of items to be greater than 10', () => {
+    expect(5).toBeGreaterThan(2)
   })
 })
