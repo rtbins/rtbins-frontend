@@ -1,4 +1,3 @@
-import MobileHeader from './MobileHeader'
-import DesktopHeader from './DesktopHeader'
+import AppHeader from './AppHeader'
 
-export { MobileHeader, DesktopHeader }
+export default AppHeader

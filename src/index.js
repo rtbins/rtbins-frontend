@@ -3,12 +3,10 @@ import 'babel-polyfill'
 import { Provider } from 'react-redux'
 import { render } from 'react-dom'
 import React from 'react'
-import 'semantic-ui-css/semantic.min.css'
 
 import './css/styles.css'
 
-import '../node_modules/bootstrap/dist/css/bootstrap.min.css'
-import '../node_modules/bootstrap/dist/js/bootstrap.min'
+import 'bootstrap/dist/css/bootstrap.min.css'
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { fab } from '@fortawesome/free-brands-svg-icons'
 
