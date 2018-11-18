@@ -8,10 +8,14 @@ export default {
   entry: {
     // 'eventsource-polyfill', // necessary for hot reloading with IE
     // 'webpack-hot-middleware/client?reload=true', //note that it reloads the page if hot module reloading fails.
-    app: ['./src/index.js', 'webpack-hot-middleware/client?reload=true'],
+    app: ['./src/index.tsx', 'webpack-hot-middleware/client?reload=true'],
     // filename: path.resolve(__dirname, 'src/index'),
   },
   target: 'web',
+  devtool: 'source-map',
+  resolve: {
+    extensions: ['.js', '.jsx', '.json', '.ts', '.tsx'],
+  },
   output: {
     path: `${__dirname}/dist`, // Note: Physical files are only output by the production build task `npm run build`.
     publicPath: '/',
@@ -35,6 +39,11 @@ export default {
   module: {
     rules: [
       {
+        test: /\.(ts|tsx)$/,
+        loader: 'awesome-typescript-loader',
+      },
+      { enforce: 'pre', test: /\.js$/, loader: 'source-map-loader' },
+      {
         test: /\.js$/,
         include: path.join(__dirname, 'src'),
         loaders: ['babel'],
@@ -44,13 +53,13 @@ export default {
         loader: 'file-loader',
       },
       {
-        test: /(bootstrap\.min|normalize|css.styles|semantic\.min)\.css$/,
+        test: /(bootstrap\.min|normalize|css.styles|toastr\.min)\.css$/,
         loaders: ['style-loader', 'css-loader'],
       },
       {
-        test: /^((?!(bootstrap|normalize|css.styles|semantic\.min)).)*\.css$/,
+        test: /^((?!(bootstrap|normalize|css.styles|toastr\.min)).)*\.css$/,
         loader:
-          'style!css-loader?modules&importLoaders=1&localIdentName=[name]__[local]___[hash:base64:5]',
+          'typings-for-css-modules?modules&namedExport&camelCase',
       },
       {
         test: /(\.scss)$/,

@@ -1,15 +1,26 @@
 // #region imports
 import React from 'react'
 import PropTypes from 'prop-types'
-import styles from './resume.css'
+import * as styles from './resume.css'
 import Mission from './content/mission'
 import Projects from './content/projects'
 import Education from './content/education'
 import WorkExperience from './content/workExperience'
-
 // #endregion
 
-const Resume = ({ mission, projects, education, workExperience }) => {
+type IProps = {
+  mission: any,
+  projects: any,
+  education: any,
+  workExperience: any
+}
+
+const Resume: React.FunctionComponent<IProps> = ({
+  mission,
+  projects,
+  education,
+  workExperience,
+}) => {
   return (
     <div className={styles.layout_main}>
       <Mission mission={mission} />
