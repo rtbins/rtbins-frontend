@@ -27,7 +27,9 @@ export default {
   plugins: [
     new webpack.HotModuleReplacementPlugin(),
     new webpack.NoEmitOnErrorsPlugin(),
-    new webpack.WatchIgnorePlugin([/css\.d\.ts$/]),
+    new webpack.WatchIgnorePlugin([
+      /css\.d\.ts$/
+    ]),
     new webpack.ProvidePlugin({
       React: 'react',
       $: 'jquery',
@@ -54,12 +56,13 @@ export default {
         loader: 'file-loader',
       },
       {
-        test: /(bootstrap\.min|normalize|css.styles|toastr\.min|semantic\.min)\.css$/,
+        test: /(bootstrap\.min|normalize|css.styles|toastr\.min)\.css$/,
         loaders: ['style-loader', 'css-loader'],
       },
       {
-        test: /^((?!(bootstrap|normalize|css.styles|toastr\.min|semantic\.min)).)*\.css$/,
-        loader: 'typings-for-css-modules?modules&namedExport&camelCase',
+        test: /^((?!(bootstrap|normalize|css.styles|toastr\.min)).)*\.css$/,
+        loader:
+          'typings-for-css-modules?modules&namedExport&camelCase',
       },
       {
         test: /(\.scss)$/,

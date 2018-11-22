@@ -1,7 +1,5 @@
-import expect from 'expect'
-
 describe('Main test', () => {
-  it('should pass', () => {
+  test('should pass', () => {
     expect(true).toEqual(true)
   })
 })
