@@ -8,10 +8,7 @@ import App from './App'
 describe('App rendering tests', () => {
   test('renders without crashing', () => {
     const div = document.createElement('div')
-    ReactDOM.render(
-      <App />,
-      div,
-    )
+    ReactDOM.render(<App />, div)
   })
 })
 

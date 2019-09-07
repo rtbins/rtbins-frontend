@@ -1,3 +1,7 @@
+var jsExtensions = ['.js', '.jsx'];
+var tsExtensions = ['.ts', '.tsx'];
+var allExtensions = jsExtensions.concat(tsExtensions);
+
 module.exports = {
 	env: {
 		es6: true,
@@ -12,12 +16,23 @@ module.exports = {
 		'react',
 		'prettier',
 	],
-	parser: 'babel-eslint',
+	parser: '@typescript-eslint/parser',
 	parserOptions: {
 		ecmaVersion: 6,
 		sourceType: 'module',
 		ecmaFeatures: {
 			jsx: true
+		}
+	},
+	settings: {
+		'import/extensions': allExtensions,
+		'import/parsers': {
+			'@typescript-eslint/parser': tsExtensions
+		},
+		'import/resolver': {
+			'node': {
+				'extensions': allExtensions
+			}
 		}
 	},
 	rules: {
@@ -26,7 +41,7 @@ module.exports = {
 		'arrow-parens': 'off', // Incompatible with prettier
 		'object-curly-newline': 'off', // Incompatible with prettier
 		'no-mixed-operators': 'off', // Incompatible with prettier
-		'arrow-body-style': 'as-needed', // Not our taste?
+		'arrow-body-style': 2, // Not our taste?
 		'function-paren-newline': 'off', // Incompatible with prettier
 		//'no-plusplus': 'off',
 		'space-before-function-paren': 0, // Incompatible with prettier
@@ -40,15 +55,17 @@ module.exports = {
 
 		//'react/require-default-props': 'off', // airbnb use error
 		'react/forbid-prop-types': 'off', // airbnb use error
-		'react/jsx-filename-extension': ['error', { extensions: ['.js'] }], // airbnb is using .jsx
+		'react/jsx-filename-extension': ['error', {
+			extensions: ['.js', ".tsx"]
+		}], // airbnb is using .jsx
 
-		'prefer-destructuring': 'on',
+		'prefer-destructuring': 2,
 
 		'react/no-find-dom-node': 'off', // I don't know
 		'react/no-did-mount-set-state': 'off',
 		'react/no-unused-prop-types': 'off', // Is still buggy
 		'react/jsx-one-expression-per-line': 'off',
-		"import/no-extraneous-dependencies": ["error", {"devDependencies": true}],
+		"import/no-extraneous-dependencies": ["error", { "devDependencies": true }],
 
 		"jsx-a11y/anchor-is-valid": ["error", { "components": ["Link"], "specialLink": ["to"] }],
 		"jsx-a11y/label-has-for": [2, {
