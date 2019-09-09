@@ -1,0 +1,25 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: rtbins-frontend
+  labels:
+    app: rtbins
+    tier: frontend
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: rtbins
+      tier: frontend
+  template:
+    metadata:
+      labels:
+        app: rtbins
+        tier: frontend
+    spec:
+      containers:
+      - name: frontend
+        image: rtbins-frontend
+        ports:
+        - name: http-server
+          containerPort: 8080
